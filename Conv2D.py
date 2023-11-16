@@ -83,7 +83,7 @@ class Conv2D:
                                     if 0 <= y_in < h_in and 0 <= x_in < w_in:
                                         sum += input[b][c_in][y_in][x_in] * weight[c_out][c_in][kernel_y][kernel_x]
                                     elif self.pad_mode == 'replicate':
-                                        y_in = max(0, min(y_in, w_in - 1))
+                                        y_in = max(0, min(y_in, h_in - 1))
                                         x_in = max(0, min(x_in, w_in - 1))
                                         sum += input[b][c_in][y_in][x_in] * weight[c_out][c_in][kernel_y][kernel_x]
 
