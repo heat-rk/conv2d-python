@@ -30,7 +30,7 @@ class Conv2D:
             self.pad = padding
         elif padding == 'same':
             if self.stride[0] != 1 or self.stride[1] != 1:
-                raise ValueError('padding == \'same\' can be applied only with stride = 0')
+                raise ValueError('padding == \'same\' can be applied only with stride = 1')
             self.pad = (self.kernel_size[0] - 1, self.kernel_size[1] - 1)
         elif padding == 'valid':
             self.pad = (0, 0)
